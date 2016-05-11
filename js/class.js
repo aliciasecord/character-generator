@@ -1,7 +1,3 @@
-/* Array for random class selection */
-var Classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard'];
-var PCClass = Classes[Math.floor(Math.random() * Classes.length)];
-
 function Class (align1, align2, h, skills, skillRanks, BAB, Fort, Ref, Will){
     this.alignment = function () {
         var x = align1[Math.floor(Math.random() * align1.length)];
