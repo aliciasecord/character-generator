@@ -1,7 +1,3 @@
-/* Array for random race selection */
-var Races = ['Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human'];
-var PCRace = Races[Math.floor(Math.random() * Races.length)];
-
 /* Random gender assignment */
 var Gender = function () {
     var x = Math.floor(Math.random() * 2);
