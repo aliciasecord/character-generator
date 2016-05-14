@@ -70,13 +70,13 @@ function race(languages, optLang, size, age, speed, mheight, mweight, mNames, fh
       	var y = Roll(6, e);
       	var z = Roll(6, f);
         if (PCClass == "Barbarian" || PCClass == "Rogue" || PCClass == "Sorcerer") {
-            return age + x;
+            return age + x + PCLevel - 1;
         	}
         else if (PCClass == "Bard" || PCClass == "Fighter" || PCClass == "Paladin" || PCClass == "Ranger") {
-            return age + y;
+            return age + y + PCLevel - 1;
             }
         else {
-            return age + z;
+            return age + z + PCLevel - 1;
         	} 
         };
     }
