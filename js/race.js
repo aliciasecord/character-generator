@@ -8,7 +8,9 @@ var Gender = function () {
 };
 PCGender = Gender();
 
-function race(languages, optLang, size, age, speed, mheight, mweight, mNames, fheight, fweight, fNames, traits, weapons, a, b, c, d, e, f) {
+
+// Functions for creating races as objects
+function race(languages, optLang, size, age, speed, mheight, mweight, mNames, fheight, fweight, fNames, traits, weapons, a, b, c, d, e, f, g) {
     this.size = size;
     this.speed = speed;
     this.traits = traits;
@@ -66,17 +68,17 @@ function race(languages, optLang, size, age, speed, mheight, mweight, mNames, fh
             }
         };
     this.Age = function () {
-      	var x = Roll(c, d);
-      	var y = Roll(6, e);
-      	var z = Roll(6, f);
+      	var x = Math.round(Roll(c, d) + ((PCLevel - 1)*g));
+      	var y = Math.round(Roll(6, e) + ((PCLevel - 1)*g));
+      	var z = Math.round(Roll(6, f) + ((PCLevel - 1)*g));
         if (PCClass == "Barbarian" || PCClass == "Rogue" || PCClass == "Sorcerer") {
-            return age + x + PCLevel - 1;
+            return age + x;
         	}
         else if (PCClass == "Bard" || PCClass == "Fighter" || PCClass == "Paladin" || PCClass == "Ranger") {
-            return age + y + PCLevel - 1;
+            return age + y;
             }
         else {
-            return age + z + PCLevel - 1;
+            return age + z;
         	} 
         };
     }
@@ -109,7 +111,9 @@ var Dwarf = new race(
     /* c */ 6, 
     /* d */ 2, 
     /* e */ 3, 
-    /* f */ 4
+    /* f */ 4,
+    /* f */ 2,
+    /* g */ 3.35
     );
 
 /* Elf object for characteristics */
@@ -137,7 +141,8 @@ var Elf = new race(
     /* c */ 6, 
     /* d */ 4, 
     /* e */ 6, 
-    /* f */ 10
+    /* f */ 10,
+    /* g */ 2.2
     );
 
 /* Gnome object for characteristics */
@@ -168,7 +173,8 @@ var Gnome = new race(
     /* c */ 6, 
     /* d */ 4, 
     /* e */ 6, 
-    /* f */ 9
+    /* f */ 9,
+    /* g */ 1.8
     );
 
 /* Half-Elf object for characteristics */
@@ -198,7 +204,8 @@ var HalfElf = new race(
     /* c */ 6, 
     /* d */ 1, 
     /* e */ 2, 
-    /* f */ 3
+    /* f */ 3,
+    /* g */ 1.8
     );
 
 /* Half-Orc object for characteristics */
@@ -226,7 +233,8 @@ var HalfOrc = new race(
     /* c */ 4, 
     /* d */ 1, 
     /* e */ 1, 
-    /* f */ 2
+    /* f */ 2,
+    /* g */ 0.6
     );
 
 /* Halfling object for characteristics */
@@ -254,7 +262,8 @@ var Halfling = new race(
     /* c */ 6, 
     /* d */ 2, 
     /* e */ 3, 
-    /* f */ 4
+    /* f */ 4,
+    /* g */ 1
     );
 
 /* Human object for characteristics */
@@ -280,7 +289,8 @@ var Human = new race (
     /* c */ 4, 
     /* d */ 1, 
     /* e */ 1, 
-    /* f */ 2
+    /* f */ 2,
+    /* g */ 1
     );
     
 var PCAssignRace = function () {
@@ -355,3 +365,5 @@ PCAssignRace();
 
 if (PCSize == "Small"){var SizeMod = -1;}
 else {var SizeMod = 0;}
+
+
