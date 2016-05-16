@@ -11,11 +11,12 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   
   <script src='js/script.js'></script> <!-- holds DOM manipulations, includes JQuery, all other JS dependent on this -->
-  
-  <script src='js/dieRolls.js' defer async></script>
+  <script src='js/dieRolls.js' defer async></script> <!-- just the functions to create dice for later actions, all the subsequent js dependent on this  -->
+  <script src='js/stats.js' defer async></script> <!-- call and assign random stats based on selected race, level and class; dependent on script.js and dieRolls.js -->
+  <script src='js/basic.js' defer async></script>
   <script src='js/class.js' defer async></script>
   <script src='js/race.js' defer async></script>
-  <script src='js/stats.js' defer async></script>
+  
   
 </head>
 <body>
@@ -38,6 +39,13 @@
     
     <div id="class">
         <div id="chosenclass"></div>
+    </div>
+    
+    <div id="characterSheet">
+        <div id="cs1"></div>
+        <div id="cs2"></div>
+        <div id="cs3"></div>
+        <div id="cs4"></div>
     </div>
     
   </div>
