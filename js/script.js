@@ -102,7 +102,7 @@ $(document).ready(function() {
         $('#race').empty();
         // Create class selection
         $('#class').prepend(
-            '<p><img src="http://i280.photobucket.com/albums/kk199/MaskedBrute/ScreenShot2013-07-22at15339PM.png"></p> <h3>Choose a class</h3> <ul class="classpick"> <li id="Barbarian">Barbarian</li> <li id="Bard">Bard</li> <li id="Cleric">Cleric</li> </ul> <ul> <li id="Druid">Druid</li> <li id="Fighter">Fighter</li> <li id="Monk">Monk</li> </ul> <ul class="classpick"> <li id="Paladin">Paladin</li> <li id="Ranger">Ranger</li> <li id="Rogue">Rogue</li> </ul> <ul class="classpick"> <li id="Wizard">Wizard</li> <li id="Sorcerer">Sorcerer</li> <li id="ChooseClass">Choose for me</li> </ul>'
+            '<p><img src="http://i280.photobucket.com/albums/kk199/MaskedBrute/ScreenShot2013-07-22at15339PM.png"></p> <h3>Choose a class</h3> <ul class="classpick"> <li id="Barbarian">Barbarian</li> <li id="Bard">Bard</li> <li id="Cleric">Cleric</li> </ul> <ul class="chosenclass"> <li id="Druid">Druid</li> <li id="Fighter">Fighter</li> <li id="Monk">Monk</li> </ul> <ul class="classpick"> <li id="Paladin">Paladin</li> <li id="Ranger">Ranger</li> <li id="Rogue">Rogue</li> </ul> <ul class="classpick"> <li id="Wizard">Wizard</li> <li id="Sorcerer">Sorcerer</li> <li id="ChooseClass">Choose for me</li> </ul>'
             );
     });
     
