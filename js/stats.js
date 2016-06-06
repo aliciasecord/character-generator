@@ -47,7 +47,7 @@ var int = 0;
 var wis = 0;
 var cha = 0;
 
-var StatsAssign = function () {
+var StatsAssignRace = function () {
     switch (PCRace) {
         case ('Dwarf'):
             wis += 2;
@@ -72,6 +72,10 @@ var StatsAssign = function () {
             stats[0] += 2;
             break;
         }
+    return str, dex, con, int, wis, cha;
+};
+
+var StatsAssignClass = function () {
     switch (PCClass) {
         case ('Barbarian'):
             str += stats[5];
@@ -175,9 +179,9 @@ var StatsAssign = function () {
 
 StatsAssign();
 
-var modstr = Math.floor((str - 10)/2);
-var moddex = Math.floor((dex - 10)/2);
-var modint = Math.floor((int - 10)/2);
-var modcon = Math.floor((con - 10)/2);
-var modwis = Math.floor((wis - 10)/2);
-var modcha = Math.floor((cha - 10)/2);
+var modstr = function() {return Math.floor((str - 10)/2);};
+var moddex = function() {return Math.floor((dex - 10)/2);};
+var modint = function() {return Math.floor((int - 10)/2);};
+var modcon = function() {return Math.floor((con - 10)/2);};
+var modwis = function() {return Math.floor((wis - 10)/2);};
+var modcha = function() {return Math.floor((cha - 10)/2);};
