@@ -23,8 +23,8 @@ function race(languages, optLang, size, age, speed, mheight, mweight, mNames, fh
             optLang[i] = optLang[j];
             optLang[j] = temp;
         }        
-        if (modint > 0) {
-      		for (var x = 0; x < modint; x++) {
+        if (modint() > 0) {
+      		for (var x = 0; x < modint(); x++) {
                 lang.push(optLang[x]);
         	}
         	return lang;
