@@ -1,3 +1,30 @@
+/* Functions for rolling any die */
+function makeDie(sides) {
+  var die = function () {
+    return 1 + Math.random() * sides | 0;
+  };
+
+  die.times = function (count) {
+    var rolls = [];
+    for(var i = 0 ; i < count ; i++) {
+      rolls.push(this());
+    }
+    return rolls;
+  };
+
+  return die;
+}
+
+var Roll = function (a, b) {
+    var x = makeDie(a).times(b);
+    var total = 0;
+    for(var i in x) 
+    	if (x.hasOwnProperty(i)){	
+    		{ total += x[i]; }
+      }
+    return total;
+    };
+
 var rollStat = function () {
     var dieRolls = makeDie(5).times(4)
     for (a in dieRolls) {
