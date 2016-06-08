@@ -292,6 +292,14 @@ var Human = new race (
     /* f */ 2,
     /* g */ 1
     );
+
+var PCName = 0;
+var PCLang = 0;
+var PCSize = 0;
+var PCAge = 0;
+var PCHeight = 0;
+var PCWeight = 0;
+var RacialTraits = 0;
     
 var PCAssignRace = function () {
     switch (PCRace) {
@@ -363,7 +371,9 @@ var PCAssignRace = function () {
     
 PCAssignRace();
 
-if (PCSize == "Small"){var SizeMod = -1;}
-else {var SizeMod = 0;}
+var SizeMod = function(){
+	if (PCSize == "Small"){return -1;}
+	else {return 0;}
+};
 
-
+SizeMod();
