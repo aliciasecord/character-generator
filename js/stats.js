@@ -177,7 +177,8 @@ var StatsAssignClass = function () {
     return str, dex, con, int, wis, cha;
     };
 
-StatsAssign();
+StatsAssignRace();
+StatsAssignClass();
 
 var modstr = function() {return Math.floor((str - 10)/2);};
 var moddex = function() {return Math.floor((dex - 10)/2);};
